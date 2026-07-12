@@ -1,0 +1,7 @@
+<!doctype html><html><head><title>Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head><body>
+<h2>Admin Dashboard</h2>
+<p>Total scans: {{ total if total is defined else 0 }}</p>
+<a href="/gallery">View Gallery</a>
+</body></html>

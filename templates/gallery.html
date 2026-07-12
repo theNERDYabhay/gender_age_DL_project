@@ -1,0 +1,15 @@
+<!doctype html><html><head><title>Gallery</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head><body>
+<h2>Saved Images</h2>
+{% if scans %}
+{% for scan in scans %}
+<div>
+<img src="/{{ scan['image_path'] }}" width="180">
+<p>{{ scan['age'] }} | {{ scan['gender'] }}</p>
+</div>
+{% endfor %}
+{% else %}
+<p>No images available.</p>
+{% endif %}
+</body></html>
